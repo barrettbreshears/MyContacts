@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var emailTextFld:UITextField!
     @IBOutlet var passwordTextFld:UITextField!
@@ -47,6 +47,11 @@ class LoginViewController: UIViewController {
         
         presentViewController(contactsViewController, animated: true, completion: nil)
         
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func setLoginDefault(){
