@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
     
     func setLoginDefault(){
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setBool(true, forKey: "loggedIn")
+        defaults.setBool(false, forKey: "loggedIn")
     }
 
 }
